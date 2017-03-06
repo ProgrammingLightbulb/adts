@@ -13,7 +13,7 @@ class List::Node //self-referential Node class
 	   //link is a data member which is a pointer 
 	   //to an object of the same type (i.e. Node)
 	
-	};//end Node class definition (can only be seen by the List class)
+};//end Node class definition (can only be seen by the List class)
 
 
 List::~List()
@@ -23,9 +23,9 @@ List::~List()
 }
 	
 int List::size()
- {
+{
     return num_elements;
- }
+}
 
 void List::insert(int val, int k)
 {
@@ -57,7 +57,7 @@ void List::insert(int val, int k)
         }//end else
 
      num_elements++;
- }
+}
 
 void List::remove(int k)
 {
@@ -89,7 +89,23 @@ void List::remove(int k)
 	
 	delete delPtr;
 	num_elements--;
-	}
+}
+
+int List::get(int k)
+{
+	for(int i = 0; i < size(); i++)
+	{
+	   if(i == k)
+	   {
+		return List[i];
+	   }
+}
 	
-	//Implementations of missing operations
+void List::clear()
+{
+	while(size() != 0)
+	{
+	  remove(1);
+	}
+}	
 	
